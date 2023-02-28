@@ -1,0 +1,15 @@
+pandas==1.4.2
+numpy==1.21.5
+scikit-learn==1.1.2
+imblearn
+xgboost==1.6.2
+flask==1.1.2
+requests==2.27.1
+scipy==1.9.3
+imbalanced-learn==0.10.0
+gunicorn
+pgrep
+jinja2==3.0.3
+itsdangerous==2.0.1
+werkzeug==2.0.2
+pickle4

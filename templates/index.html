@@ -1,0 +1,52 @@
+<!DOCTYPE
+html>
+      
+      <html >
+      <!--Form https://codepen.io/frytyler/pen/EGdtg-->
+      <head>
+        <meta charset="UTF-8">
+        
+        <!-- Make it compatible to mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Employee Promotion Detection</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+      </head>
+
+      <body>
+      <div class="login">
+              <h1 style="color:Violet;">Employee promotion Prediction</h1>
+
+          <!-- Action is where the data is sent. In our case, predict page.
+          If action is omitted, it assumed to be the current page -->
+          <form action="{{ url_for('predict')}}"method="post">
+              <input type="text" name="department" placeholder="Department" required="required" /><br>
+              <input type="text" name="region" placeholder="Region" required="required" /><br>
+              <input type="text" name="education" placeholder="Level of education" required="required" /><br>
+              <input type="text" name="gender" placeholder="Gender of the employee" required="required" /><br>
+              <input type="text" name="recruitment_channel" placeholder="Recruitment channel" required="required" /><br>
+              <input type="text" name="no_of_trainings" placeholder="Number of trainings" required="required" /><br>
+              <input type="text" name="age" placeholder="Age of the Employee" required="required" /><br>
+              <input type="text" name="previous_year_rating" placeholder="Rating of previous year" required="required" /><br>	
+              <input type="text" name="lenght_of_service" placeholder="Number of year in the service" required="required" /><br>        
+              <input type="text" name="awards_won" placeholder="Number of awards won" required="required" /><br>
+              <input type="text" name="avg_training_score" placeholder="Average training score" required="required" /><br>
+                    
+              <button type="submit" class="btn btn-primary btn-block btn-large">Predict the employee class</button>
+          </form>
+
+        <br>
+        <br>
+        <h4 style="color:violet;">
+        {{ prediction_text }} </h4>
+
+      </div>
+
+
+      </body>
+      </html>
